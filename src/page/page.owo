@@ -11,383 +11,7 @@
     .title 选择您想购买的产品
     //- 切换条
     .tab-bar.clear
-      .tab-bar-item(o-tap="activeItem(0)")
-        .name 油
-      .tab-bar-item(o-tap="activeItem(1)")
-        .name 米
-      .tab-bar-item(o-tap="activeItem(2)")
-        .name 面
-      .tab-bar-item(o-tap="activeItem(3)")
-        .name 牛奶
-      .tab-bar-item(o-tap="activeItem(4)")
-        .name 调味品
-      .tab-bar-item(o-tap="activeItem(5)")
-        .name 饮用水
-      .tab-bar-item(o-tap="activeItem(6)")
-        .name 其他礼盒
     ul.tab-show-box.clear
-      li
-        img(src="@|shop.png|")
-        .name 1欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-    ul.tab-show-box.clear
-      li
-        img(src="@|shop.png|")
-        .name 2欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-    ul.tab-show-box.clear
-      li
-        img(src="@|shop.png|")
-        .name 3欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
-      li
-        img(src="@|shop.png|")
-        .name 欧丽薇兰特级初榨橄榄油（简装礼盒）750mlx2
-        .info.clear
-          .old.fl 原价99元
-          .new.fr ￥74.00
-        .input-bar
-          span.jian(o-tap="reduce") -
-          input(type="number" value="0")
-          span.jia(o-tap="add") +
     .send-bar
       h2 请填写真实信息
       .send-item
@@ -407,22 +31,70 @@
 
 <script>
   module.exports = {
+    data: {
+      info: {}
+    },
     created: function () {
-      this.activeItem(0)
+      // 获取分类列表
+      var xhr = new XMLHttpRequest();
+
+      xhr.addEventListener("readystatechange",  function() {
+        if(this.readyState === 4) {
+          let newHtml = ''
+          // 生成分类列表
+          const list = JSON.parse(this.responseText).data
+          for (let index = 0; index < list.length; index++) {
+            const element = list[index];
+            newHtml += `<div class="tab-bar-item active" o-tap="activeItem(${element.cid})"><div class="name">${element.cname}</div></div>`
+          }
+          owo.query('.tab-bar')[0].innerHTML = newHtml
+          setTimeout(() => {
+            owo.script.page.handleEvent(owo.script.page, owo.query('.tab-bar')[0])
+            owo.script.page.activeItem(list[0].cid)
+          }, 0);
+        }
+      });
+      xhr.open("GET", "https://apps.people-health.cn/misc/api/rmay/categories");
+
+      xhr.send();
+      // this.activeItem(0)
+    },
+    saveData: function () {
+      // 切换前记录上一个数据
+      const itemList = this.queryAll('.tab-show-box li input')
+      for (let index = 0; index < itemList.length; index++) {
+        const element = itemList[index];
+        const num = parseInt(element.value)
+        const gid = element.getAttribute('gid')
+        this.data.info[gid] = num
+      }
     },
     activeItem: function (index) {
-      const editList = this.queryAll('.tab-bar-item')
-      for (let index = 0; index < editList.length; index++) {
-        const element = editList[index];
-        element.classList.remove('active')
-      }
-      editList[index].classList.add('active')
-      const showBoxItem = this.queryAll('.tab-show-box')
-      for (let index = 0; index < showBoxItem.length; index++) {
-        const element = showBoxItem[index];
-        element.style.display = 'none'
-      }
-      showBoxItem[index].style.display = 'block'
+      this.saveData()
+      // 获取数据
+      var data = JSON.stringify({"cid":index});
+      var xhr = new XMLHttpRequest();
+
+      xhr.addEventListener("readystatechange", function() {
+        if(this.readyState === 4) {
+          let newHtml = ''
+          const list = JSON.parse(this.responseText).data
+          for (let index = 0; index < list.length; index++) {
+            const element = list[index];
+            newHtml += `<li><img src="${element.pic}"><div class="name">${element.title}</div><div class="info clear"><div class="old fl">${element.remark}</div><div class="new fr">￥${element.price}</div></div><div class="input-bar"><span class="jian" o-tap="reduce">-</span><input type="number" value="${owo.script.page.data.info[element.gid] || 0}" gid="${element.gid}"><span class="jia" o-tap="add">+</span></div></li>`
+          }
+          owo.query('.tab-show-box')[0].innerHTML = newHtml
+          console.log(JSON.parse(this.responseText));
+          setTimeout(() => {
+            owo.script.page.handleEvent(owo.script.page, owo.query('.tab-show-box')[0])
+          }, 100);
+        }
+      });
+
+      xhr.open("POST", "https://apps.people-health.cn/misc/api/rmay/goods");
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.send(data);
     },
     add: function () {
       const parent = this.$target.parentElement || this.$target.parentNode
@@ -442,6 +114,53 @@
       this.query('#xingming').value = ''
       this.query('#dianhua').value = ''
       this.query('#dizhi').value = ''
+    },
+    send: function () {
+      this.saveData()
+      const name = this.query('#xingming').value
+      const dianhua = this.query('#dianhua').value
+      const dizhi = this.query('#dizhi').value
+      if (name && dianhua && dizhi) {
+        // 清理数据
+        let sendData = []
+        for (const key in this.data.info) {
+          if (this.data.info.hasOwnProperty(key)) {
+            const element = this.data.info[key];
+            if (element > 0) {
+              sendData.push({
+                "gid": key,
+                "num": element
+              })
+            }
+          }
+        }
+        console.log(sendData)
+        // 发送数据
+        var data = JSON.stringify({
+          "user":{
+            "fullname": name,
+            "mobile": dianhua,
+            "address": dizhi
+          },
+          "goods": sendData
+        });
+
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function() {
+          if(this.readyState === 4) {
+            console.log(this.responseText);
+          }
+        });
+
+        xhr.open("POST", "https://apps.people-health.cn/misc/api/rmay/submitForm");
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+      } else {
+        alert('姓名地址和电话都是必填项！')
+      }
     }
   }
 </script>
@@ -495,13 +214,14 @@
 .tab-bar-item {
   float: left;
   background-color: #f4f4f4;
-  width: 140px;
+  width: 130px;
   margin: 0 10px;
   text-align: center;
   line-height: 45px;
   font-size: 20px;
   font-weight: bold;
   color: #e2c99a;
+  margin-bottom: 10px;
 }
 .tab-bar-item.active {
   background-color: #d8af68;
@@ -512,7 +232,6 @@
 }
 .tab-show-box {
   margin-top: 20px;
-  display: none;
   li {
     float: left;
     width: 260px;
@@ -530,6 +249,8 @@
       font-size: 15px;
       font-weight: bold;
       margin-top: 10px;
+      height: 38px;
+      overflow: hidden;
     }
     .info {
       line-height: 40px;

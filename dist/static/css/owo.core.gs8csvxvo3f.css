@@ -185,13 +185,14 @@ li {
 .tab-bar-item {
   float: left;
   background-color: #f4f4f4;
-  width: 140px;
+  width: 130px;
   margin: 0 10px;
   text-align: center;
   line-height: 45px;
   font-size: 20px;
   font-weight: bold;
   color: #e2c99a;
+  margin-bottom: 10px;
 }
 
 .tab-bar-item.active {
@@ -205,7 +206,6 @@ li {
 
 .tab-show-box {
   margin-top: 20px;
-  display: none;
 }
 
 .tab-show-box li {
@@ -228,6 +228,8 @@ li {
   font-size: 15px;
   font-weight: bold;
   margin-top: 10px;
+  height: 38px;
+  overflow: hidden;
 }
 
 .tab-show-box li .info {
