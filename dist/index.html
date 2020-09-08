@@ -19,7 +19,7 @@
   <meta name="catalogs" content="{TAG_83943_TAG}" />
 
   <!-- 页面主样式文件 -->
-  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.core.gs8csvxvo3f.css">
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.core.032e33zk8rgf.css">
 
   <!-- 附属css文件 -->
   <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
@@ -97,7 +97,7 @@
   <script src="./static/js/idangerous.swiper2.7.6.min.js" type="text/javascript" charset="UTF-8"></script>
   <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
   <!-- 框架script文件 -->
-  <script src="./static/js/owo.core.gs8csvxvo3f.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/owo.core.032e33zk8rgf.js" type="text/javascript" charset="UTF-8"></script>
   <script type="text/javascript" charset="UTF-8">
     owo.script = {
       "page": {
@@ -109,19 +109,27 @@
           var xhr = new XMLHttpRequest();
           xhr.addEventListener("readystatechange", function() {
             if (this.readyState === 4) {
-              var newHtml = ''; // 生成分类列表
+              var newHtml = '';
+
+              if (JSON.parse(this.responseText).code != 0) {
+                alert(mess.msg);
+                return;
+              } // 生成分类列表
+
 
               var list = JSON.parse(this.responseText).data;
 
               for (var index = 0; index < list.length; index++) {
                 var element = list[index];
-                newHtml += "<div class=\"tab-bar-item active\" o-tap=\"activeItem(" + element.cid + ")\"><div class=\"name\">" + element.cname + "</div></div>";
+                newHtml += "<div class=\"tab-bar-item\" cid=\"" + element.cid + "\" o-tap=\"activeItem(" + element.cid + ")\"><div class=\"name\">" + element.cname + "</div></div>";
               }
 
               owo.query('.tab-bar')[0].innerHTML = newHtml;
               setTimeout(function() {
                 owo.script.page.handleEvent(owo.script.page, owo.query('.tab-bar')[0]);
-                owo.script.page.activeItem(list[0].cid);
+                owo.script.page.activeItem(list[0].cid); // 活跃第一项
+
+                owo.query('.tab-bar-item')[0].classList.add('active');
               }, 0);
             }
           });
@@ -140,6 +148,15 @@
           }
         },
         "activeItem": function activeItem(index) {
+          var tabList = this.queryAll('.tab-bar-item');
+
+          for (var _index = 0; _index < tabList.length; _index++) {
+            var element = tabList[_index];
+            element.classList.remove('active');
+          }
+
+          console.log(index);
+          this.query("[cid=\"" + index + "\"]").classList.add('active');
           this.saveData(); // 获取数据
 
           var data = JSON.stringify({
@@ -151,9 +168,14 @@
               var newHtml = '';
               var list = JSON.parse(this.responseText).data;
 
-              for (var _index = 0; _index < list.length; _index++) {
-                var element = list[_index];
-                newHtml += "<li><img src=\"" + element.pic + "\"><div class=\"name\">" + element.title + "</div><div class=\"info clear\"><div class=\"old fl\">" + element.remark + "</div><div class=\"new fr\">\uFFE5" + element.price + "</div></div><div class=\"input-bar\"><span class=\"jian\" o-tap=\"reduce\">-</span><input type=\"number\" value=\"" + (owo.script.page.data.info[element.gid] || 0) + "\" gid=\"" + element.gid + "\"><span class=\"jia\" o-tap=\"add\">+</span></div></li>";
+              if (JSON.parse(this.responseText).code != 0) {
+                alert(mess.msg);
+                return;
+              }
+
+              for (var _index2 = 0; _index2 < list.length; _index2++) {
+                var _element = list[_index2];
+                newHtml += "<li><img src=\"" + _element.pic + "\"><div class=\"name\">" + _element.title + "</div><div class=\"info clear\"><div class=\"old fl\">" + _element.remark + "</div><div class=\"new fr\">\uFFE5" + _element.price + "</div></div><div class=\"input-bar\"><span class=\"jian\" o-tap=\"reduce\">-</span><input type=\"number\" value=\"" + (owo.script.page.data.info[_element.gid] || 0) + "\" gid=\"" + _element.gid + "\"><span class=\"jia\" o-tap=\"add\">+</span></div></li>";
               }
 
               owo.query('.tab-show-box')[0].innerHTML = newHtml;
@@ -194,6 +216,11 @@
           var dianhua = this.query('#dianhua').value;
           var dizhi = this.query('#dizhi').value;
 
+          if (dianhua.length !== 11) {
+            alert('电话号码不正确!');
+            return;
+          }
+
           if (name && dianhua && dizhi) {
             // 清理数据
             var sendData = [];
@@ -225,7 +252,16 @@
             xhr.withCredentials = true;
             xhr.addEventListener("readystatechange", function() {
               if (this.readyState === 4) {
-                console.log(this.responseText);
+                console.log();
+
+                var _mess = JSON.parse(this.responseText);
+
+                if (_mess.code != 0) {
+                  alert(_mess.msg);
+                  return;
+                }
+
+                alert('提交成功,感谢您的参与!');
               }
             });
             xhr.open("POST", "https://apps.people-health.cn/misc/api/rmay/submitForm");

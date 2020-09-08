@@ -41,16 +41,22 @@
       xhr.addEventListener("readystatechange",  function() {
         if(this.readyState === 4) {
           let newHtml = ''
+          if (JSON.parse(this.responseText).code != 0) {
+            alert(mess.msg)
+            return
+          }
           // 生成分类列表
           const list = JSON.parse(this.responseText).data
           for (let index = 0; index < list.length; index++) {
             const element = list[index];
-            newHtml += `<div class="tab-bar-item active" o-tap="activeItem(${element.cid})"><div class="name">${element.cname}</div></div>`
+            newHtml += `<div class="tab-bar-item" cid="${element.cid}" o-tap="activeItem(${element.cid})"><div class="name">${element.cname}</div></div>`
           }
           owo.query('.tab-bar')[0].innerHTML = newHtml
           setTimeout(() => {
             owo.script.page.handleEvent(owo.script.page, owo.query('.tab-bar')[0])
             owo.script.page.activeItem(list[0].cid)
+            // 活跃第一项
+            owo.query('.tab-bar-item')[0].classList.add('active')
           }, 0);
         }
       });
@@ -70,6 +76,14 @@
       }
     },
     activeItem: function (index) {
+      let tabList = this.queryAll('.tab-bar-item')
+      
+      for (let index = 0; index < tabList.length; index++) {
+        const element = tabList[index];
+        element.classList.remove('active')
+      }
+      console.log(index)
+      this.query(`[cid="${index}"]`).classList.add('active')
       this.saveData()
       // 获取数据
       var data = JSON.stringify({"cid":index});
@@ -79,6 +93,10 @@
         if(this.readyState === 4) {
           let newHtml = ''
           const list = JSON.parse(this.responseText).data
+          if (JSON.parse(this.responseText).code != 0) {
+            alert(mess.msg)
+            return
+          }
           for (let index = 0; index < list.length; index++) {
             const element = list[index];
             newHtml += `<li><img src="${element.pic}"><div class="name">${element.title}</div><div class="info clear"><div class="old fl">${element.remark}</div><div class="new fr">￥${element.price}</div></div><div class="input-bar"><span class="jian" o-tap="reduce">-</span><input type="number" value="${owo.script.page.data.info[element.gid] || 0}" gid="${element.gid}"><span class="jia" o-tap="add">+</span></div></li>`
@@ -120,6 +138,10 @@
       const name = this.query('#xingming').value
       const dianhua = this.query('#dianhua').value
       const dizhi = this.query('#dizhi').value
+      if (dianhua.length !== 11) {
+        alert('电话号码不正确!')
+        return
+      }
       if (name && dianhua && dizhi) {
         // 清理数据
         let sendData = []
@@ -150,7 +172,13 @@
 
         xhr.addEventListener("readystatechange", function() {
           if(this.readyState === 4) {
-            console.log(this.responseText);
+            console.log();
+            const mess = JSON.parse(this.responseText)
+            if (mess.code != 0) {
+              alert(mess.msg)
+              return
+            }
+            alert('提交成功,感谢您的参与!')
           }
         });
 
